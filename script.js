@@ -1,5 +1,6 @@
-﻿const scrollLinks = document.querySelectorAll('[data-scroll]');
+const scrollLinks = document.querySelectorAll('[data-scroll]');
 const pageHeader = document.querySelector('.header');
+const stickyCta = document.querySelector('.sticky-cta');
 
 scrollLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -53,8 +54,18 @@ function updateHeaderState() {
   if (!pageHeader) return;
   pageHeader.classList.toggle('is-scrolled', window.scrollY > 10);
 }
+
+function updateStickyCtaState() {
+  if (!stickyCta) return;
+  const triggerPoint = Math.max(window.innerHeight * 0.45, 280);
+  stickyCta.classList.toggle('is-visible', window.scrollY > triggerPoint);
+}
+
 window.addEventListener('scroll', updateHeaderState, { passive: true });
+window.addEventListener('scroll', updateStickyCtaState, { passive: true });
+window.addEventListener('resize', updateStickyCtaState);
 updateHeaderState();
+updateStickyCtaState();
 
 const reveals = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
