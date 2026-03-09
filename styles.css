@@ -290,13 +290,14 @@ h3 {
 
 .hero-orbit {
   position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 8%;
+  top: 10%;
+  transform: none;
   width: min(37vw, 360px);
   aspect-ratio: 1;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.82;
 }
 
 .orbit-ring {
@@ -329,16 +330,11 @@ h3 {
 }
 
 .orbit-core p {
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #d3ebff;
+  display: none;
 }
 
 .orbit-core strong {
-  margin-top: 0.1rem;
-  font-size: 1.2rem;
-  font-family: "Space Grotesk", sans-serif;
+  display: none;
 }
 
 .hero-capture {
@@ -639,16 +635,19 @@ input:focus {
 
 @media (min-width: 760px) {
   .hero-shell {
-    grid-template-columns: minmax(0, 1fr) 310px;
-    padding-right: min(31vw, 340px);
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    align-items: end;
+    padding-right: clamp(1.2rem, 3vw, 2.6rem);
   }
 
   .hero-capture {
-    position: absolute;
-    right: clamp(1rem, 2vw, 1.6rem);
-    bottom: clamp(-2.2rem, -1.4vw, -0.8rem);
-    width: min(320px, 36vw);
-    transform: rotate(-1.8deg);
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 360px;
+    transform: none;
+    justify-self: end;
   }
 
   .card-grid.three {
@@ -676,12 +675,16 @@ input:focus {
 
   .hero-shell {
     padding: 3rem;
-    padding-right: 360px;
   }
 
   .hero-capture {
-    right: 1.7rem;
-    bottom: -2.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-orbit {
+    top: 11%;
+    right: 10%;
+    width: 320px;
   }
 
   .card {
