@@ -286,23 +286,11 @@ h3 {
   margin-bottom: 6px;
 }
 
-.trust-badges {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.trust-badges li {
-  width: fit-content;
-  border-radius: 999px;
-  padding: 8px 14px;
-  border: 1px solid #bfdaf7;
-  background: #f7fbff;
-  font-weight: 700;
-  color: #163b68;
+.cta-note {
+  margin: 2px 0 0;
+  color: #5f7899;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .hero-dashboard {
@@ -346,6 +334,44 @@ h3 {
   color: rgba(238, 246, 255, 0.94);
 }
 
+.dashboard-case {
+  margin-bottom: 8px;
+  color: rgba(234, 244, 255, 0.92);
+}
+
+.dashboard-quote {
+  margin-top: 12px;
+  color: #f2f8ff;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.hero-quick-form {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.hero-quick-form label {
+  display: grid;
+  gap: 6px;
+  color: #edf6ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.hero-quick-form input {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-quick-form .btn-light {
+  width: 100%;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .dashboard-note {
   margin-top: 12px;
   padding-top: 12px;
@@ -375,6 +401,13 @@ h3 {
 
 .hero-link:hover {
   border-bottom-color: rgba(15, 95, 184, 0.7);
+}
+
+.hero-trustline {
+  margin-top: 14px;
+  color: #35577f;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .card {

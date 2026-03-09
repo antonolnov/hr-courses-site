@@ -39,9 +39,9 @@ faqItems.forEach((item) => {
   });
 });
 
-const demoForm = document.querySelector(`.js-demo-form`);
+const demoForms = document.querySelectorAll(`.js-demo-form`);
 
-if (demoForm) {
+demoForms.forEach((demoForm) => {
   demoForm.addEventListener(`submit`, (event) => {
     event.preventDefault();
     const submitButton = demoForm.querySelector(`button[type="submit"]`);
@@ -57,7 +57,7 @@ if (demoForm) {
       demoForm.reset();
     }, 2600);
   });
-}
+});
 
 const reveals = document.querySelectorAll(`.reveal`);
 const stickyCta = document.querySelector(`.sticky-cta`);
