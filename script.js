@@ -1,31 +1,6 @@
 const scrollLinks = document.querySelectorAll(`[data-scroll]`);
 const pageHeader = document.querySelector(`.header`);
 
-const heroProofData = {
-  title: `Кейс выпускницы`,
-  story:
-    `Марина пришла без опыта в подборе, собрала портфолио на реальных кейсах и уже во время обучения смогла увереннее проходить собеседования на HR-позиции.`,
-  metricOne: `3 приглашения`,
-  metricTwo: `+32%`,
-  note: `Это займет до 2 минут. Без оплаты и без обязательств.`
-};
-
-function applyHeroProofData() {
-  const title = document.getElementById(`hero-proof-title`);
-  const story = document.getElementById(`hero-proof-story`);
-  const metricOne = document.getElementById(`hero-proof-metric-1`);
-  const metricTwo = document.getElementById(`hero-proof-metric-2`);
-  const note = document.getElementById(`hero-proof-note`);
-
-  if (title) title.textContent = heroProofData.title;
-  if (story) story.textContent = heroProofData.story;
-  if (metricOne) metricOne.textContent = heroProofData.metricOne;
-  if (metricTwo) metricTwo.textContent = heroProofData.metricTwo;
-  if (note) note.textContent = heroProofData.note;
-}
-
-applyHeroProofData();
-
 scrollLinks.forEach((link) => {
   link.addEventListener(`click`, (event) => {
     const href = link.getAttribute(`href`);
