@@ -189,13 +189,13 @@ ul {
 .hero-shell {
   position: relative;
   display: grid;
-  gap: 1.6rem;
-  align-items: center;
+  gap: 1.2rem;
+  align-items: start;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(236, 245, 255, 0.86));
   border: 1px solid rgba(149, 196, 239, 0.56);
   border-radius: 56px 38px 52px 46px;
-  padding: clamp(1.2rem, 4vw, 3.1rem);
+  padding: clamp(1rem, 2.6vw, 2.2rem);
   box-shadow: var(--shadow);
   isolation: isolate;
 }
@@ -218,10 +218,10 @@ ul {
 
 .hero-right {
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: center;
   position: relative;
-  min-height: 320px;
+  min-height: 360px;
 }
 
 .eyebrow {
@@ -295,9 +295,9 @@ h3 {
 
 .hero-orbit {
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(-100%, -50%);
+  left: 50%;
+  top: 34%;
+  transform: translate(-50%, -50%);
   width: clamp(190px, 20vw, 250px);
   aspect-ratio: 1;
   pointer-events: none;
@@ -351,8 +351,8 @@ h3 {
 
 .hero-capture {
   position: absolute;
-  right: -8px;
-  bottom: -92px;
+  right: -12px;
+  top: 58%;
   z-index: 4;
   display: grid;
   gap: 0.75rem;
@@ -646,7 +646,7 @@ input:focus {
   .hero-capture {
     position: relative;
     right: auto;
-    bottom: auto;
+    top: auto;
     margin-top: 0.5rem;
     transform: none;
     width: 100%;
@@ -698,20 +698,21 @@ input:focus {
   }
 
   .hero-shell {
-    padding: 3rem;
+    padding: 2.2rem;
   }
 
   .hero-right {
-    min-height: 340px;
+    min-height: 380px;
   }
 
   .hero-capture {
-    right: -14px;
-    bottom: -106px;
+    right: -16px;
+    top: 56%;
   }
 
   .hero-orbit {
     width: 250px;
+    top: 34%;
   }
 
   .card {
