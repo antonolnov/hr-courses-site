@@ -210,6 +210,17 @@ h3 {
   padding: 9px 16px;
 }
 
+.header .btn-sm {
+  color: #0f5fb8;
+  background: #eaf4ff;
+  border: 1px solid #b9d9fb;
+  box-shadow: none;
+}
+
+.header .btn-sm:hover {
+  box-shadow: 0 8px 18px rgba(24, 144, 255, 0.18);
+}
+
 .btn-ghost {
   background: rgba(255, 255, 255, 0.92);
   color: #0f4f98;
@@ -242,6 +253,10 @@ h3 {
   gap: 18px;
 }
 
+.hero-layout {
+  position: relative;
+}
+
 .hero-main {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(151, 199, 247, 0.58);
@@ -265,6 +280,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.hero-actions {
+  margin-bottom: 6px;
 }
 
 .trust-badges {
@@ -337,6 +356,14 @@ h3 {
 
 .hero-linkline {
   margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.96rem;
+}
+
+.hero-linkline span {
+  color: #6c8ab0;
 }
 
 .hero-link {
@@ -713,6 +740,16 @@ textarea:focus {
 @media (min-width: 1120px) {
   .section {
     padding: 80px 0;
+  }
+
+  .hero-layout::after {
+    content: "";
+    position: absolute;
+    left: calc(55% - 12px);
+    top: 12%;
+    bottom: 12%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(24, 144, 255, 0.35), transparent);
   }
 
   .card-grid.four,

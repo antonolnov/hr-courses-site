@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     question: "Какой документ я получу?",
-    answer: "После завершения вы получите именной сертификат WorkHere Education и документ о прохождении программы.",
+    answer: "После завершения вы получите диплом государственного образца и документ о прохождении программы.",
   },
   {
     question: "Как выбрать программу?",
@@ -68,20 +68,19 @@ export default function WorkHereEducationLanding() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <p className={styles.eyebrow}>Практическое обучение в HR и рекрутменте</p>
-        <h1>Получите профессию или вырастите доход в HR за счет навыков, которые сразу применяются в работе</h1>
+          <h1>Выйдите на новый уровень в HR за 6-12 недель с практикой на реальных кейсах</h1>
         <p className={styles.lead}>
           Реальные кейсы, портфолио, поддержка экспертов и карьерный трек, который дает измеримый результат.
         </p>
-        <div className={styles.actions}>
-          <a className={styles.btn} href="#consultation">Подобрать программу</a>
-          <a className={styles.btnGhost} href="#consultation">Получить консультацию</a>
-          <a className={styles.btnGhost} href="#programs">Перейти к программам</a>
-        </div>
-        <ul className={styles.badges}>
-          <li>7000+ выпускников в HR</li>
-          <li>4,9/5 средняя оценка программ</li>
-          <li>Практика с экспертной обратной связью</li>
-        </ul>
+          <div className={styles.actions}>
+            <a className={styles.btn} href="#consultation">Подобрать программу</a>
+            <a className={styles.btnGhost} href="#consultation">Получить консультацию</a>
+          </div>
+          <ul className={styles.badges}>
+            <li>4,9/5 средняя оценка программ</li>
+            <li>Диплом государственного образца</li>
+            <li>Практика с экспертной обратной связью</li>
+          </ul>
       </section>
 
       <section className={styles.section}>
@@ -115,7 +114,7 @@ export default function WorkHereEducationLanding() {
           <li>Разбор кейсов и типовых ошибок</li>
           <li>Современные инструменты и метрики</li>
           <li>Карьерная траектория роста</li>
-          <li>Сертификат WorkHere Education</li>
+          <li>Диплом государственного образца</li>
         </ul>
       </section>
 
@@ -155,7 +154,7 @@ export default function WorkHereEducationLanding() {
         <p className={styles.eyebrow}>Социальное доказательство</p>
         <h2>Результаты выпускников и доверие HR-сообщества</h2>
         <div className={styles.grid3}>
-          <article className={styles.card}><strong>7000+</strong><p>выпускников в экосистеме WorkHere</p></article>
+          <article className={styles.card}><strong>6-12 недель</strong><p>средняя длительность треков до карьерного результата</p></article>
           <article className={styles.card}><strong>300+</strong><p>компаний в HR-комьюнити WorkHere</p></article>
           <article className={styles.card}><strong>4,9/5</strong><p>средняя оценка программ</p></article>
         </div>
