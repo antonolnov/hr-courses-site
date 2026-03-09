@@ -33,44 +33,43 @@
 
   <main>
     <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-main reveal">
+      <div class="container hero-shell reveal">
+        <div class="hero-copy">
           <p class="eyebrow">WorkHere Education</p>
-          <h1>Не курс. Ваш карьерный интерфейс для роста в HR.</h1>
-          <p class="lead">Практические треки по найму, адаптации и HR-аналитике. Вы не изучаете "впрок" - вы собираете портфолио и усиливаете позицию на рынке.</p>
+          <h1>Освойте современный HR и соберите портфолио на реальных кейсах.</h1>
+          <p class="lead">Практические треки по найму, адаптации и HR-аналитике. Вы растете в роли через реальные задачи, а не через формальную теорию.</p>
           <div class="hero-actions">
             <a href="#hero-form" class="btn btn-primary" data-scroll>Подобрать программу за 2 минуты</a>
           </div>
           <a href="#programs" class="hero-link" data-scroll>Смотреть программы</a>
-          <ul class="chips" aria-label="Факты о программе">
+          <ul class="hero-trust" aria-label="Факты о программе">
             <li>4.9/5 средняя оценка</li>
             <li>Формат 6-12 недель</li>
             <li>Диплом гос. образца</li>
           </ul>
         </div>
 
-        <aside class="hero-form reveal" id="hero-form" aria-label="Форма подбора программы">
-          <h2>Быстрый старт без лишних шагов</h2>
-          <p class="form-lead">Оставьте контакт и получите подборку треков под ваш уровень и цель в течение рабочего дня.</p>
-          <form class="js-demo-form compact-form" action="#" method="post">
-            <label for="hero-contact">Телефон или Telegram</label>
-            <input id="hero-contact" name="contact" type="text" placeholder="+7 (...) или @username" autocomplete="tel" required>
-            <button type="submit" class="btn btn-primary">Получить консультацию</button>
-            <p class="microcopy">Без оплаты и обязательств. Только релевантные рекомендации по старту.</p>
-          </form>
-          <ul class="proof-list">
-            <li>Ответ куратора в рабочее время</li>
-            <li>Понятный план первого шага</li>
-          </ul>
-        </aside>
-      </div>
-
-      <div class="container kinetic-strip reveal" aria-label="Короткий кейс">
-        <p>Кейс: переход в HR-роль через портфолио на реальных задачах</p>
-        <div>
-          <span>3 приглашения на финальный этап</span>
-          <span>+32% к первому офферу</span>
+        <div class="hero-orbit" aria-hidden="true">
+          <span class="orbit-ring orbit-ring-a"></span>
+          <span class="orbit-ring orbit-ring-b"></span>
+          <div class="orbit-core">
+            <p>HR Career Track</p>
+            <strong>6-12 недель</strong>
+          </div>
         </div>
+
+        <form class="hero-capture js-demo-form" id="hero-form" aria-label="Форма подбора программы" action="#" method="post">
+          <h2>Персональный старт в HR</h2>
+          <p>Оставьте контакт и получите подбор трека под вашу цель в течение рабочего дня.</p>
+          <label for="hero-contact">Телефон или Telegram</label>
+          <input id="hero-contact" name="contact" type="text" placeholder="+7 (...) или @username" autocomplete="tel" required>
+          <button type="submit" class="btn btn-primary">Получить консультацию</button>
+          <small>Без оплаты и обязательств</small>
+          <ul class="capture-proof">
+            <li>Куратор на связи</li>
+            <li>Понятный первый шаг</li>
+          </ul>
+        </form>
       </div>
     </section>
 
