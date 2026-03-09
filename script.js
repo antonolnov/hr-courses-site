@@ -60,6 +60,19 @@ if (demoForm) {
 }
 
 const reveals = document.querySelectorAll(`.reveal`);
+const stickyCta = document.querySelector(`.sticky-cta`);
+
+function updateStickyCtaVisibility() {
+  if (!stickyCta) return;
+
+  const triggerPoint = Math.max(window.innerHeight * 0.4, 260);
+  const shouldShow = window.scrollY > triggerPoint;
+  stickyCta.classList.toggle(`is-visible`, shouldShow);
+}
+
+window.addEventListener(`scroll`, updateStickyCtaVisibility, { passive: true });
+window.addEventListener(`resize`, updateStickyCtaVisibility);
+updateStickyCtaVisibility();
 
 if (`IntersectionObserver` in window) {
   const observer = new IntersectionObserver(

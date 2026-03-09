@@ -250,6 +250,14 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
+.hero-main h1 {
+  max-width: 16ch;
+}
+
+.hero-main .lead {
+  max-width: 62ch;
+}
+
 .hero-actions,
 .card-actions,
 .inline-cta {
@@ -263,7 +271,8 @@ h3 {
   list-style: none;
   padding: 0;
   margin: 16px 0 0;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -316,6 +325,29 @@ h3 {
 
 .dashboard-item span {
   color: rgba(238, 246, 255, 0.94);
+}
+
+.dashboard-note {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(214, 233, 255, 0.4);
+  color: rgba(234, 245, 255, 0.94);
+  font-size: 0.94rem;
+}
+
+.hero-linkline {
+  margin: 12px 0 0;
+}
+
+.hero-link {
+  color: #0f5fb8;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15, 95, 184, 0.35);
+}
+
+.hero-link:hover {
+  border-bottom-color: rgba(15, 95, 184, 0.7);
 }
 
 .card {
@@ -604,6 +636,16 @@ textarea:focus {
   justify-content: space-between;
   gap: 12px;
   box-shadow: 0 18px 34px rgba(5, 37, 85, 0.45);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sticky-cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .sticky-cta p {
