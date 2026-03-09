@@ -189,8 +189,8 @@ ul {
 .hero-shell {
   position: relative;
   display: grid;
-  gap: 2.4rem;
-  align-items: start;
+  gap: 1.6rem;
+  align-items: center;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(236, 245, 255, 0.86));
   border: 1px solid rgba(149, 196, 239, 0.56);
@@ -218,11 +218,10 @@ ul {
 
 .hero-right {
   display: grid;
-  align-content: start;
+  align-content: center;
   justify-items: center;
-  gap: 1rem;
   position: relative;
-  padding-top: 0.6rem;
+  min-height: 320px;
 }
 
 .eyebrow {
@@ -295,8 +294,11 @@ h3 {
 }
 
 .hero-orbit {
-  position: relative;
-  width: clamp(200px, 22vw, 280px);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  width: clamp(190px, 20vw, 250px);
   aspect-ratio: 1;
   pointer-events: none;
   z-index: 1;
@@ -348,7 +350,9 @@ h3 {
 }
 
 .hero-capture {
-  position: relative;
+  position: absolute;
+  right: -8px;
+  bottom: -92px;
   z-index: 4;
   display: grid;
   gap: 0.75rem;
@@ -358,7 +362,7 @@ h3 {
   border: 1px solid rgba(151, 202, 245, 0.52);
   box-shadow: 0 20px 42px rgba(67, 149, 224, 0.22);
   width: min(360px, 100%);
-  transform: translateX(-18px) rotate(-3deg);
+  transform: rotate(-3deg);
 }
 
 .hero-capture h2 {
@@ -625,13 +629,25 @@ input:focus {
     grid-template-columns: 1fr;
   }
 
+  .hero-right {
+    min-height: 0;
+    margin-top: 0.4rem;
+  }
+
   .hero-orbit {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
     width: min(52vw, 220px);
     opacity: 0.58;
   }
 
   .hero-capture {
-    margin-top: 0.3rem;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 0.5rem;
     transform: none;
     width: 100%;
   }
@@ -651,12 +667,10 @@ input:focus {
   .hero-capture {
     max-width: 360px;
     justify-self: end;
-    transform: translateX(-18px) rotate(-3deg);
-    margin-top: 0.6rem;
   }
 
   .hero-orbit {
-    width: clamp(200px, 20vw, 260px);
+    width: clamp(190px, 20vw, 250px);
     opacity: 0.78;
   }
 
@@ -687,9 +701,17 @@ input:focus {
     padding: 3rem;
   }
 
+  .hero-right {
+    min-height: 340px;
+  }
+
   .hero-capture {
-    margin-top: 0.4rem;
-    margin-bottom: 0;
+    right: -14px;
+    bottom: -106px;
+  }
+
+  .hero-orbit {
+    width: 250px;
   }
 
   .card {
