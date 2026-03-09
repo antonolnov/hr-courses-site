@@ -1,27 +1,80 @@
-﻿const triggers = document.querySelectorAll(`.js-scroll`);
-triggers.forEach((btn) => {
-  btn.addEventListener(`click`, () => {
-    const target = document.querySelector(btn.dataset.target);
+const scrollLinks = document.querySelectorAll(`[data-scroll]`);
+
+scrollLinks.forEach((link) => {
+  link.addEventListener(`click`, (event) => {
+    const href = link.getAttribute(`href`);
+    if (!href || !href.startsWith(`#`)) return;
+
+    const target = document.querySelector(href);
     if (!target) return;
-    const offset = 72;
-    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: y, behavior: `smooth` });
+
+    event.preventDefault();
+    const offset = 74;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: `smooth` });
   });
 });
 
-const form = document.querySelector(`form`);
-if (form) {
-  form.addEventListener(`submit`, (e) => {
-    e.preventDefault();
-    const submit = form.querySelector(`button[type=submit]`);
-    if (!submit) return;
-    const text = submit.textContent;
-    submit.textContent = `Спасибо, мы свяжемся с вами`;
-    submit.disabled = true;
-    setTimeout(() => {
-      submit.textContent = text;
-      submit.disabled = false;
-      form.reset();
-    }, 2200);
+const faqItems = document.querySelectorAll(`.faq-item`);
+
+faqItems.forEach((item) => {
+  const trigger = item.querySelector(`.faq-question`);
+  if (!trigger) return;
+
+  trigger.addEventListener(`click`, () => {
+    const isOpen = item.classList.contains(`open`);
+
+    faqItems.forEach((otherItem) => {
+      otherItem.classList.remove(`open`);
+      const otherTrigger = otherItem.querySelector(`.faq-question`);
+      if (otherTrigger) {
+        otherTrigger.setAttribute(`aria-expanded`, `false`);
+      }
+    });
+
+    if (!isOpen) {
+      item.classList.add(`open`);
+      trigger.setAttribute(`aria-expanded`, `true`);
+    }
   });
+});
+
+const demoForm = document.querySelector(`.js-demo-form`);
+
+if (demoForm) {
+  demoForm.addEventListener(`submit`, (event) => {
+    event.preventDefault();
+    const submitButton = demoForm.querySelector(`button[type="submit"]`);
+    if (!submitButton) return;
+
+    const initialText = submitButton.textContent;
+    submitButton.textContent = `Спасибо! Мы свяжемся с вами в ближайшее время`;
+    submitButton.disabled = true;
+
+    setTimeout(() => {
+      submitButton.textContent = initialText;
+      submitButton.disabled = false;
+      demoForm.reset();
+    }, 2600);
+  });
+}
+
+const reveals = document.querySelectorAll(`.reveal`);
+
+if (`IntersectionObserver` in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(`is-visible`);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  reveals.forEach((section) => observer.observe(section));
+} else {
+  reveals.forEach((section) => section.classList.add(`is-visible`));
 }
