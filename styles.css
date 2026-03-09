@@ -326,7 +326,7 @@ h3 {
 }
 
 .orbit-core p {
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #2a689f;
@@ -335,7 +335,7 @@ h3 {
 
 .orbit-core strong {
   margin-top: 0.08rem;
-  font-size: 0.96rem;
+  font-size: 1.08rem;
   color: #174e84;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -653,14 +653,15 @@ input:focus {
     max-width: 350px;
     justify-self: end;
     transform: rotate(-2deg);
+    margin-top: 2.8rem;
   }
 
   .hero-orbit {
-    right: clamp(310px, 34%, 430px);
-    top: 56%;
+    right: clamp(300px, 38%, 430px);
+    top: 42%;
     transform: translateY(-50%);
-    width: min(24vw, 260px);
-    opacity: 0.74;
+    width: min(19vw, 220px);
+    opacity: 0.7;
   }
 
   .card-grid.three {
@@ -691,13 +692,14 @@ input:focus {
   }
 
   .hero-capture {
-    margin-bottom: 0.1rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
   }
 
   .hero-orbit {
-    right: clamp(350px, 33%, 460px);
-    top: 54%;
-    width: 280px;
+    right: 390px;
+    top: 40%;
+    width: 240px;
   }
 
   .card {
