@@ -1,320 +1,207 @@
-<!doctype html>
-<html lang="ru">
+﻿<!doctype html>
+<html lang='ru'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WorkHere Education - Современное HR-образование с карьерным результатом</title>
-  <meta name="description" content="WorkHere Education: практические программы для рекрутеров и HR. Кейсы, портфолио, поддержка экспертов и ясный карьерный результат.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content='WorkHere: практические программы с карьерным фокусом. Формат 6-12 недель, поддержка менторов и понятный план старта.'>
+  <title>WorkHere | Обучение с карьерным фокусом</title>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@600;700&display=swap' rel='stylesheet'>
+  <link rel='stylesheet' href='styles.css'>
 </head>
-<body id="top">
-  <div class="ambient" aria-hidden="true">
-    <span class="ambient-orb ambient-orb-a"></span>
-    <span class="ambient-orb ambient-orb-b"></span>
-    <span class="ambient-grid"></span>
+<body>
+  <div class='bg-layer' aria-hidden='true'>
+    <div class='bg-orb bg-orb-a'></div>
+    <div class='bg-orb bg-orb-b'></div>
+    <div class='bg-grid'></div>
   </div>
-
-  <header class="header">
-    <div class="container nav-row">
-      <a href="#top" class="logo">WorkHere <span>Education</span></a>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#why">Почему WorkHere</a>
-        <a href="#programs">Программы</a>
-        <a href="#proof">Результаты</a>
-        <a href="#faq">FAQ</a>
+  <header class='header'>
+    <div class='container header-row'>
+      <a href='#top' class='logo' data-scroll>Work<span>Here</span></a>
+      <nav class='nav' aria-label='Основная навигация'>
+        <a href='#why' data-scroll>Почему мы</a>
+        <a href='#format' data-scroll>Формат</a>
+        <a href='#programs' data-scroll>Программы</a>
+        <a href='#results' data-scroll>Результаты</a>
+        <a href='#faq' data-scroll>FAQ</a>
       </nav>
-      <a class="btn btn-sm" href="#consultation" data-scroll>Подобрать программу за 2 минуты</a>
+      <a href='#hero-form' class='btn btn-nav' data-scroll>Подобрать программу</a>
     </div>
   </header>
-
-  <main>
-    <section class="hero section reveal">
-      <div class="container hero-layout">
-        <div class="hero-main">
-          <p class="eyebrow">Для новичков и действующих HR-специалистов</p>
-          <h1>Перейдите на новый уровень в HR за 6-12 недель</h1>
-          <p class="lead">Практика на реальных сценариях найма, адаптации и HR-аналитики. На выходе - прикладные навыки, сильное портфолио и понятный следующий карьерный шаг.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#consultation" data-scroll>Подобрать программу за 2 минуты</a>
+  <main id='top'>
+    <section class='hero section'>
+      <div class='container hero-grid'>
+        <div class='hero-main reveal'>
+          <p class='eyebrow'>WorkHere education</p>
+          <h1>Перейдите на новый уровень в HR без перегруза.</h1>
+          <p class='lead'>Короткие практические треки по найму, адаптации и HR-аналитике с поддержкой ментора и понятным карьерным планом.</p>
+          <div class='hero-actions'>
+            <a href='#hero-form' class='btn btn-primary' data-scroll>Получить персональный план</a>
           </div>
-          <a class="hero-secondary-link" href="#programs" data-scroll>Смотреть программы</a>
-          <p class="cta-note">Бесплатно, без оплаты и без обязательств</p>
-          <ul class="trust-chips" aria-label="Факторы доверия">
-            <li>4.9/5 средняя оценка</li>
+          <a href='#programs' class='hero-link' data-scroll>Смотреть программы</a>
+          <ul class='chips' aria-label='Факты о программе'>
+            <li>Рейтинг выпускников 4.9/5</li>
+            <li>Формат обучения 6-12 недель</li>
             <li>Диплом гос. образца</li>
-            <li>Практика на реальных HR-кейсах</li>
           </ul>
         </div>
-
-        <aside class="hero-form-panel" aria-label="Быстрый подбор программы">
-          <p class="dashboard-title">Старт без лишних шагов</p>
-          <h2>Подберем программу под вашу карьерную цель</h2>
-          <p class="dashboard-case">Оставьте контакт, и мы предложим подходящий трек по вашему опыту и задачам.</p>
-
-          <form class="hero-quick-form js-demo-form" action="#" method="post">
-            <label for="hero-contact">Телефон или email</label>
-            <input id="hero-contact" required type="text" name="contact" placeholder="Телефон или email" autocomplete="email">
-            <button type="submit" class="btn">Получить подбор</button>
+        <aside class='hero-form reveal' id='hero-form'>
+          <h2>Быстрый старт</h2>
+          <p class='form-lead'>Оставьте контакт и получите подборку треков под ваш опыт в течение рабочего дня.</p>
+          <form class='js-demo-form compact-form'>
+            <label for='hero-contact'>Телефон или Telegram</label>
+            <input id='hero-contact' name='contact' type='text' placeholder='+7 (...) или @username' autocomplete='tel' required>
+            <button type='submit' class='btn btn-primary'>Получить консультацию</button>
+            <p class='microcopy'>Нажимая кнопку, вы соглашаетесь на обработку контакта для обратной связи.</p>
           </form>
-
-          <p class="dashboard-note">Это займет до 2 минут. Без оплаты и без обязательств.</p>
-          <ul class="hero-proof-mini" aria-label="Короткие подтверждения">
-            <li>Диплом гос. образца по завершении</li>
-            <li>Практика и обратная связь от экспертов</li>
+          <ul class='proof-list'>
+            <li>Ответ куратора без лишних звонков</li>
+            <li>Понятный план первого шага</li>
           </ul>
         </aside>
       </div>
     </section>
-
-    <section id="why" class="section reveal">
-      <div class="container">
-        <p class="eyebrow">Почему сейчас и почему WorkHere</p>
-        <h2>HR-рынок ускорился, и классическое обучение больше не успевает за задачами бизнеса</h2>
-        <div class="bento-grid">
-          <article class="card bento-item">
-            <h3>Почему сейчас</h3>
-            <p>Компании ожидают от HR не операционки, а бизнес-результата: быстрее закрывать вакансии, снижать текучесть и управлять эффективностью команды на данных.</p>
-          </article>
-          <article class="card bento-item">
-            <h3>Почему классика устаревает</h3>
-            <p>Модель "лекция + тест" не учит принимать решения в реальном найме и people-менеджменте. На рынке ценится только прикладной опыт и скорость внедрения.</p>
-          </article>
-          <article class="card bento-item bento-accent">
-            <h3>Почему WorkHere дает преимущество</h3>
-            <p>Вы учитесь на реальных HR-сценариях, получаете обратную связь от практиков и выстраиваете карьерный маршрут внутри работающей HR-экосистемы WorkHere.</p>
-          </article>
+    <section class='section' id='why'>
+      <div class='container'>
+        <div class='section-head reveal'>
+          <p class='eyebrow'>Почему WorkHere</p>
+          <h2>Фокус на навыках, которые реально применяются в работе.</h2>
         </div>
-        <div class="inline-cta">
-          <a class="btn" href="#consultation" data-scroll>Подобрать программу под цель</a>
-          <a class="btn btn-line" href="#programs" data-scroll>Перейти к программам</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft reveal">
-      <div class="container">
-        <p class="eyebrow">Для кого это обучение</p>
-        <h2>Каждому профилю - свой сценарий роста и практики</h2>
-        <div class="card-grid four">
-          <article class="card profile-card">
-            <h3>Начинающим рекрутерам</h3>
-            <p>Освоите поиск, интервью, работу с воронкой и качество оффера, чтобы быстрее выйти на уверенный уровень в профессии.</p>
+        <div class='card-grid three reveal'>
+          <article class='card'>
+            <h3>Практика с первого модуля</h3>
+            <p>Каждый блок заканчивается задачей в стиле реального рабочего процесса, а не тестом ради теста.</p>
           </article>
-          <article class="card profile-card">
-            <h3>HR-специалистам</h3>
-            <p>Систематизируете адаптацию, оценку, развитие и удержание, чтобы влиять на метрики бизнеса, а не только на процессы.</p>
+          <article class='card'>
+            <h3>Поддержка наставника</h3>
+            <p>Вы понимаете, что делать дальше: регулярная обратная связь, корректировки и разбор ошибок.</p>
           </article>
-          <article class="card profile-card">
-            <h3>Тем, кто переходит в HR</h3>
-            <p>Соберете портфолио практических кейсов и понятную карьерную стратегию перехода без затяжного периода неопределенности.</p>
-          </article>
-          <article class="card profile-card">
-            <h3>Руководителям подбора и HR</h3>
-            <p>Построите управляемую HR-систему: от найма до развития людей, с четкими метриками и прозрачной операционной моделью.</p>
+          <article class='card'>
+            <h3>План карьерных шагов</h3>
+            <p>Помогаем собрать портфолио, подготовиться к интервью и выбрать вакансии под ваш текущий уровень.</p>
           </article>
         </div>
       </div>
     </section>
-
-    <section class="section reveal">
-      <div class="container outcomes-layout">
-        <div>
-          <p class="eyebrow">Что вы получите</p>
-          <h2>Практическую систему действий, которую можно применить сразу</h2>
-          <ul class="checklist">
-            <li>Прикладные навыки для задач найма, адаптации, удержания и развития</li>
-            <li>Разбор реальных HR-кейсов и ошибок, которые тормозят результат</li>
-            <li>Современные инструменты: аналитика, автоматизация, сценарии интервью</li>
-            <li>Карьерную траекторию с понятными точками роста в роли и доходе</li>
-            <li>Диплом гос. образца по завершении программы</li>
-          </ul>
+    <section class='section' id='format'>
+      <div class='container'>
+        <div class='section-head reveal'>
+          <p class='eyebrow'>Формат</p>
+          <h2>Гибкий график, четкая структура и предсказуемый результат.</h2>
         </div>
-
-        <article class="card spotlight-card">
-          <p class="spotlight-label">Career Outcome Pack</p>
-          <h3>Ваш пакет карьерного результата</h3>
-          <p>Портфолио кейсов, рабочие шаблоны, чек-листы и roadmap на 3-6 месяцев, чтобы уверенно двигаться к следующей HR-роли.</p>
-          <a class="btn" href="#consultation" data-scroll>Получить персональный трек</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-soft reveal">
-      <div class="container">
-        <p class="eyebrow">Формат обучения</p>
-        <h2>Как мы доводим до результата в работе, а не только до завершения курса</h2>
-        <div class="card-grid two process-grid">
-          <article class="card process-card">
-            <span>01</span>
-            <h3>Стартовая диагностика</h3>
-            <p>Определяем ваш уровень, карьерную цель и выбираем программу с фокусом на ближайший практический эффект.</p>
+        <div class='card-grid three reveal'>
+          <article class='card'>
+            <h3>Длительность 6-12 недель</h3>
+            <p>Выбираете интенсивность под свою занятость, без длинных программ на год.</p>
           </article>
-          <article class="card process-card">
-            <span>02</span>
-            <h3>Практика на кейсах</h3>
-            <p>После каждого модуля вы выполняете задание, которое можно адаптировать под свою текущую рабочую ситуацию.</p>
+          <article class='card'>
+            <h3>3-5 часов в неделю</h3>
+            <p>Материалы доступны в записи, а ключевые встречи проходят в удобное время.</p>
           </article>
-          <article class="card process-card">
-            <span>03</span>
-            <h3>Поддержка и комьюнити</h3>
-            <p>Кураторы и HR-community WorkHere помогают быстрее пройти узкие места и закрепить внедрение на практике.</p>
+          <article class='card'>
+            <h3>Проверка заданий вручную</h3>
+            <p>Вместо автооценки вы получаете комментарии по качеству решения и точкам роста.</p>
           </article>
-          <article class="card process-card">
-            <span>04</span>
-            <h3>Гибкий темп</h3>
-            <p>Средняя длительность программ 6-12 недель. Формат рассчитан на совмещение с работой и текущими проектами.</p>
-          </article>
-        </div>
-        <div class="inline-cta">
-          <a class="btn" href="#consultation" data-scroll>Получить консультацию по формату</a>
-          <a class="btn btn-line" href="#programs" data-scroll>Перейти к программам</a>
         </div>
       </div>
     </section>
-
-    <section id="programs" class="section reveal">
-      <div class="container">
-        <p class="eyebrow">Программы WorkHere Education</p>
-        <h2>Выберите программу под текущую карьерную задачу</h2>
-        <div class="card-grid three">
-          <article class="card program-card">
-            <p class="program-tag">6-8 недель</p>
+    <section class='section' id='programs'>
+      <div class='container'>
+        <div class='section-head reveal'>
+          <p class='eyebrow'>Программы</p>
+          <h2>Выберите направление и начните с понятной стартовой точки.</h2>
+        </div>
+        <div class='card-grid three reveal'>
+          <article class='card'>
+            <p class='tag'>Digital</p>
             <h3>HR Start</h3>
-            <p>Быстрый вход в профессию: рекрутинг, адаптация, коммуникация с менеджерами и базовая HR-аналитика.</p>
-            <div class="card-actions">
-              <a class="btn btn-line" href="#consultation" data-scroll>Подробнее</a>
-              <a class="btn" href="#consultation" data-scroll>Подобрать программу</a>
-            </div>
+            <p>Базовый трек для входа в профессию: рекрутинг, адаптация, коммуникация с менеджерами.</p>
           </article>
-
-          <article class="card program-card">
-            <p class="program-tag">8-10 недель</p>
+          <article class='card'>
+            <p class='tag'>Recruiting</p>
             <h3>Recruiter Pro</h3>
-            <p>Продвинутый трек по найму: sourcing, интервью по компетенциям, автоматизация воронки и управление качеством оффера.</p>
-            <div class="card-actions">
-              <a class="btn btn-line" href="#consultation" data-scroll>Подробнее</a>
-              <a class="btn" href="#consultation" data-scroll>Подобрать программу</a>
-            </div>
+            <p>Продвинутый трек по подбору: sourcing, интервью по компетенциям и качество оффера.</p>
           </article>
-
-          <article class="card program-card">
-            <p class="program-tag">10-12 недель</p>
+          <article class='card'>
+            <p class='tag'>Leadership</p>
             <h3>HR Lead Track</h3>
-            <p>Трек для роста в лидерской роли: people analytics, удержание, performance-процессы и HR-бренд в связке с бизнесом.</p>
-            <div class="card-actions">
-              <a class="btn btn-line" href="#consultation" data-scroll>Подробнее</a>
-              <a class="btn" href="#consultation" data-scroll>Подобрать программу</a>
+            <p>Рост в управленческую роль: people analytics, удержание, performance и HR-бренд.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class='section' id='results'>
+      <div class='container'>
+        <div class='section-head reveal'>
+          <p class='eyebrow'>Результаты</p>
+          <h2>Понимаемый прогресс на каждом этапе обучения.</h2>
+        </div>
+        <div class='result-grid reveal'>
+          <article class='result-card'>
+            <strong>4.9/5</strong>
+            <p>Средняя оценка программы участниками по итогам обучения.</p>
+          </article>
+          <article class='result-card'>
+            <strong>6-12 недель</strong>
+            <p>Стандартная длительность треков до готового карьерного пакета.</p>
+          </article>
+          <article class='result-card'>
+            <strong>1:1 поддержка</strong>
+            <p>Персональные рекомендации по шагам развития и поиску подходящих вакансий.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class='section' id='faq'>
+      <div class='container'>
+        <div class='section-head reveal'>
+          <p class='eyebrow'>FAQ</p>
+          <h2>Частые вопросы перед стартом.</h2>
+        </div>
+        <div class='faq-list reveal'>
+          <article class='faq-item open'>
+            <button class='faq-question' aria-expanded='true'>Подходит ли обучение новичкам?</button>
+            <div class='faq-answer'>
+              <p>Да. На старте определяем текущий уровень и рекомендуем трек, чтобы нагрузка была посильной и полезной.</p>
+            </div>
+          </article>
+          <article class='faq-item'>
+            <button class='faq-question' aria-expanded='false'>Можно ли совмещать с работой?</button>
+            <div class='faq-answer'>
+              <p>Да, формат рассчитан на занятых специалистов: в среднем 3-5 часов в неделю и гибкий график прохождения.</p>
+            </div>
+          </article>
+          <article class='faq-item'>
+            <button class='faq-question' aria-expanded='false'>Что происходит после заявки?</button>
+            <div class='faq-answer'>
+              <p>Куратор связывается с вами, уточняет цель и предлагает оптимальный трек с планом первых шагов.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
-
-    <section id="proof" class="section section-soft reveal">
-      <div class="container">
-        <p class="eyebrow">Социальное доказательство</p>
-        <h2>Цифры и кейсы, подтверждающие реальную ценность обучения</h2>
-        <div class="stats-grid">
-          <article class="card stat-card"><strong>6-12 недель</strong><span>средняя длительность треков до карьерного результата</span></article>
-          <article class="card stat-card"><strong>300+</strong><span>компаний в HR-community WorkHere</span></article>
-          <article class="card stat-card"><strong>4.9/5</strong><span>средняя оценка программ и экспертной поддержки</span></article>
-        </div>
-
-        <div class="card-grid three testimonials">
-          <article class="card">
-            <p>"Перешла из ассистента в рекрутинг за 2 месяца. На собеседованиях показывала кейсы из программы - это стало главным аргументом."</p>
-            <span>Марина, Recruiter</span>
-          </article>
-          <article class="card">
-            <p>"После внедрения подходов из WorkHere текучесть в период адаптации снизилась на 18% за квартал."</p>
-            <span>Олег, HR Generalist</span>
-          </article>
-          <article class="card">
-            <p>"Собрали управляемую систему HR-метрик. Руководители теперь принимают кадровые решения на данных, а не на гипотезах."</p>
-            <span>Елена, HR Lead</span>
-          </article>
-        </div>
-
-        <p class="community-note">WorkHere Education - часть цифровой HR-экосистемы WorkHere: обучение, практика и профессиональное сообщество работают как единая среда роста.</p>
-      </div>
-    </section>
-
-    <section id="faq" class="section reveal">
-      <div class="container faq-layout">
+    <section class='section section-cta' id='contact'>
+      <div class='container cta-box reveal'>
         <div>
-          <p class="eyebrow">FAQ</p>
-          <h2>Частые вопросы перед стартом</h2>
-          <p class="lead">Нужна персональная рекомендация? Оставьте заявку - подберем программу под ваш опыт и карьерную цель.</p>
-          <a class="btn" href="#consultation" data-scroll>Подобрать программу</a>
+          <p class='eyebrow'>Старт</p>
+          <h2>Готовы обсудить ваш план обучения?</h2>
+          <p class='lead'>Оставьте контакт и получите рекомендации по программе без обязательств.</p>
         </div>
-
-        <div class="faq-list" role="list">
-          <article class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">Сколько длится обучение?</button>
-            <div class="faq-answer"><p>В зависимости от трека программа занимает в среднем 6-12 недель. Материалы доступны в удобном темпе с сохранением обратной связи.</p></div>
-          </article>
-          <article class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">Нужен ли опыт?</button>
-            <div class="faq-answer"><p>Нет. Есть треки для старта с нуля и для действующих HR-специалистов. Программу подбираем под ваш текущий уровень.</p></div>
-          </article>
-          <article class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">Какой документ я получу?</button>
-            <div class="faq-answer"><p>После завершения вы получите диплом гос. образца с подтверждением освоенной программы и ключевых компетенций.</p></div>
-          </article>
-          <article class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">Как выбрать программу?</button>
-            <div class="faq-answer"><p>Нажмите "Подобрать программу" и оставьте короткую заявку. На консультации мы сопоставим цель, опыт и оптимальный трек.</p></div>
-          </article>
-          <article class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false">Можно ли совмещать с работой?</button>
-            <div class="faq-answer"><p>Да. Формат рассчитан на занятых специалистов: в среднем 5-7 часов в неделю, большая часть занятий проходит в гибком графике.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="consultation" class="section final-cta reveal">
-      <div class="container final-layout">
-        <div>
-          <p class="eyebrow">Финальный CTA</p>
-          <h2>Получите персональный план развития в HR и стартуйте по самой короткой траектории</h2>
-          <p class="lead">За 20 минут разберем вашу задачу, карьерную точку и подберем программу с понятным результатом и сроками.</p>
-        </div>
-
-        <form class="card final-form js-demo-form" action="#" method="post">
-          <label>Имя
-            <input required type="text" name="name" placeholder="Анна">
-          </label>
-          <label>Контакт
-            <input required type="text" name="contact" placeholder="+7 900 000-00-00 / you@mail.ru">
-          </label>
-          <label>Цель
-            <textarea required name="goal" rows="4" placeholder="Например: перейти в рекрутинг и получить оффер в течение 3 месяцев"></textarea>
-          </label>
-          <button type="submit" class="btn">Записаться на консультацию</button>
+        <form class='js-demo-form cta-form'>
+          <label for='footer-contact'>Контакт для связи</label>
+          <input id='footer-contact' name='contact' type='text' placeholder='Телефон или Telegram' required>
+          <button type='submit' class='btn btn-primary'>Отправить заявку</button>
         </form>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-row">
-      <p>© 2026 WorkHere Education</p>
-      <a href="#top" data-scroll>Наверх</a>
+  <footer class='footer'>
+    <div class='container footer-row'>
+      <p>WorkHere, 2026</p>
+      <a href='#top' data-scroll>Наверх</a>
     </div>
   </footer>
-
-  <div class="sticky-cta" aria-label="Быстрый CTA">
-    <p>Готовы выбрать трек под вашу карьерную цель?</p>
-    <a class="btn" href="#consultation" data-scroll>Подобрать программу</a>
-  </div>
-
-  <script src="script.js"></script>
+  <script src='script.js'></script>
 </body>
 </html>
-
-
-
