@@ -1127,8 +1127,8 @@ input:focus {
     position: absolute;
     left: 0;
     right: 0;
-    top: calc(-1 * (env(safe-area-inset-top) + 20px));
-    height: calc(env(safe-area-inset-top) + 20px);
+    top: -140px;
+    height: calc(env(safe-area-inset-top) + 140px);
     background: #ffffff;
     pointer-events: none;
   }
