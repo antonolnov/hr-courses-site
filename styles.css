@@ -1175,23 +1175,23 @@ input:focus {
   }
 
   .hero-right {
-    min-height: 420px;
-    grid-template-rows: minmax(160px, auto) auto;
+    min-height: 0;
+    grid-template-rows: minmax(150px, auto) auto;
     align-content: start;
     justify-items: end;
-    row-gap: 0.6rem;
+    row-gap: 0.4rem;
   }
 
   .hero-capture {
     max-width: 360px;
     justify-self: end;
     margin-top: 0;
-    margin-bottom: -72px;
-    transform: translateY(8px) rotate(-3.5deg);
+    margin-bottom: -150px;
+    transform: translateY(10px) rotate(-3.5deg);
   }
 
   .hero-orbit {
-    width: clamp(220px, 24vw, 290px);
+    width: clamp(210px, 22vw, 270px);
     justify-self: end;
     margin-top: 0;
     transform: translateX(-6px);
@@ -1242,18 +1242,18 @@ input:focus {
   }
 
   .hero-right {
-    min-height: 470px;
+    min-height: 0;
     display: grid;
-    grid-template-rows: minmax(180px, auto) auto;
+    grid-template-rows: minmax(170px, auto) auto;
     align-content: start;
     justify-items: end;
-    row-gap: 0.7rem;
+    row-gap: 0.45rem;
     padding-right: 0.35rem;
   }
 
   .hero-orbit {
     position: relative;
-    width: clamp(250px, 18vw, 300px);
+    width: clamp(230px, 16vw, 270px);
     margin-top: 0;
     justify-self: end;
     align-self: end;
@@ -1264,9 +1264,9 @@ input:focus {
     position: relative;
     width: 320px;
     margin-top: 0;
-    margin-bottom: -128px;
+    margin-bottom: -220px;
     justify-self: end;
-    transform: translateY(16px) rotate(-4deg);
+    transform: translateY(14px) rotate(-4deg);
   }
 
   .program-track:nth-child(2) {
