@@ -69,10 +69,10 @@ if (leadModal && modalOpeners.length) {
   function openLeadModal(programName) {
     lastFocusedElement = document.activeElement;
     if (modalProgramLabel) {
-      modalProgramLabel.textContent = programName || 'Программа WorkHere';
+      modalProgramLabel.textContent = programName || 'Программа Workhere Academy';
     }
     if (modalProgramInput) {
-      modalProgramInput.value = programName || 'Программа WorkHere';
+      modalProgramInput.value = programName || 'Программа Workhere Academy';
     }
     leadModal.classList.add('is-open');
     leadModal.setAttribute('aria-hidden', 'false');
@@ -94,7 +94,7 @@ if (leadModal && modalOpeners.length) {
   modalOpeners.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
       event.preventDefault();
-      openLeadModal(trigger.dataset.program || 'Программа WorkHere');
+      openLeadModal(trigger.dataset.program || 'Программа Workhere Academy');
     });
   });
 

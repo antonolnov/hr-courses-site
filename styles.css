@@ -120,12 +120,23 @@ ul {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.56rem;
   font-weight: 800;
   letter-spacing: 0.01em;
 }
 
-.logo span {
-  color: var(--blue);
+.logo img {
+  display: block;
+  width: 98px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.logo-name {
+  color: #1f3e63;
+  white-space: nowrap;
 }
 
 .nav {
@@ -858,6 +869,10 @@ input:focus {
   .header-row {
     min-height: 72px;
     flex-wrap: wrap;
+  }
+
+  .logo-name {
+    font-size: 0.94rem;
   }
 
   .nav {
