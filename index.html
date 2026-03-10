@@ -139,7 +139,7 @@
               <li>252 академических часа</li>
               <li>Диплом гос. образца</li>
             </ul>
-            <a href="#hero-form" class="track-link" data-scroll>Подробнее о курсе</a>
+            <a href="#hero-form" class="track-link js-open-lead-modal" data-program="HR-менеджер">Подробнее о курсе</a>
           </article>
           <article class="program-track track-recruiting">
             <p class="track-kicker">№2</p>
@@ -152,7 +152,7 @@
               <li>32 академических часа</li>
               <li>Диплом гос. образца</li>
             </ul>
-            <a href="#hero-form" class="track-link" data-scroll>Подробнее о курсе</a>
+            <a href="#hero-form" class="track-link js-open-lead-modal" data-program="Система адаптации стажеров в компании">Подробнее о курсе</a>
           </article>
           <article class="program-track track-leadership">
             <p class="track-kicker">№3</p>
@@ -165,7 +165,7 @@
               <li>40 академических часов</li>
               <li>Диплом гос. образца</li>
             </ul>
-            <a href="#hero-form" class="track-link" data-scroll>Подробнее о курсе</a>
+            <a href="#hero-form" class="track-link js-open-lead-modal" data-program="ИИ в HR">Подробнее о курсе</a>
           </article>
         </div>
       </div>
@@ -249,6 +249,28 @@
   <div class="sticky-cta" aria-label="Быстрый CTA">
     <p>Подбор программы за 2 минуты</p>
     <a href="#hero-form" class="btn btn-primary" data-scroll>Оставить контакт</a>
+  </div>
+
+  <div class="lead-modal" id="lead-modal" aria-hidden="true">
+    <div class="lead-modal__backdrop" data-close-modal></div>
+    <section class="lead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+      <button type="button" class="lead-modal__close" aria-label="Закрыть окно" data-close-modal>×</button>
+      <span class="lead-modal__orb lead-modal__orb-a" aria-hidden="true"></span>
+      <span class="lead-modal__orb lead-modal__orb-b" aria-hidden="true"></span>
+      <p class="lead-modal__eyebrow">WorkHere Education</p>
+      <h2 id="lead-modal-title">Узнайте детали программы</h2>
+      <p class="lead-modal__lead">Оставьте контакт, и мы подберем оптимальный формат обучения и ближайший старт.</p>
+      <p class="lead-modal__program">Вы выбрали: <strong id="modal-program-label">Программу WorkHere</strong></p>
+      <form class="js-demo-form lead-modal__form" id="modal-form" action="#" method="post">
+        <input id="modal-program" name="program" type="hidden" value="">
+        <label for="modal-contact">Телефон или Telegram</label>
+        <input id="modal-contact" name="contact" type="text" placeholder="+7 (...) или @username" autocomplete="tel" required>
+        <label for="modal-goal">Цель обучения</label>
+        <input id="modal-goal" name="goal" type="text" placeholder="Например: перейти в HR-роль" required>
+        <button type="submit" class="btn btn-primary">Получить консультацию</button>
+        <small>Ответим в рабочее время без обязательств</small>
+      </form>
+    </section>
   </div>
 
   <script src="script.js"></script>

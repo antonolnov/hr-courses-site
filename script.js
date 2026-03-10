@@ -50,6 +50,79 @@ demoForms.forEach((form) => {
   });
 });
 
+const leadModal = document.querySelector('#lead-modal');
+const modalOpeners = document.querySelectorAll('.js-open-lead-modal');
+
+if (leadModal && modalOpeners.length) {
+  const modalProgramLabel = leadModal.querySelector('#modal-program-label');
+  const modalProgramInput = leadModal.querySelector('#modal-program');
+  const modalContactInput = leadModal.querySelector('#modal-contact');
+  const modalClosers = leadModal.querySelectorAll('[data-close-modal]');
+  let lastFocusedElement = null;
+
+  function getFocusableElements() {
+    return leadModal.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input:not([disabled]), select, [tabindex]:not([tabindex="-1"])'
+    );
+  }
+
+  function openLeadModal(programName) {
+    lastFocusedElement = document.activeElement;
+    if (modalProgramLabel) {
+      modalProgramLabel.textContent = programName || 'Программа WorkHere';
+    }
+    if (modalProgramInput) {
+      modalProgramInput.value = programName || 'Программа WorkHere';
+    }
+    leadModal.classList.add('is-open');
+    leadModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    window.setTimeout(() => {
+      if (modalContactInput) modalContactInput.focus();
+    }, 30);
+  }
+
+  function closeLeadModal() {
+    leadModal.classList.remove('is-open');
+    leadModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+      lastFocusedElement.focus();
+    }
+  }
+
+  modalOpeners.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openLeadModal(trigger.dataset.program || 'Программа WorkHere');
+    });
+  });
+
+  modalClosers.forEach((button) => {
+    button.addEventListener('click', closeLeadModal);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (!leadModal.classList.contains('is-open')) return;
+    if (event.key === 'Escape') {
+      closeLeadModal();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = getFocusableElements();
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
 function updateHeaderState() {
   if (!pageHeader) return;
   pageHeader.classList.toggle('is-scrolled', window.scrollY > 10);
