@@ -905,13 +905,27 @@ input:focus {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
   }
 
+  .hero-right {
+    min-height: 470px;
+    grid-template-rows: minmax(190px, auto) auto;
+    align-content: start;
+    justify-items: end;
+    row-gap: 0.85rem;
+  }
+
   .hero-capture {
     max-width: 360px;
     justify-self: end;
+    margin-top: 0;
+    margin-bottom: -92px;
+    transform: translateY(8px) rotate(-3.5deg);
   }
 
   .hero-orbit {
     width: clamp(220px, 24vw, 290px);
+    justify-self: end;
+    margin-top: 0;
+    transform: translateX(14px);
   }
 
   .card-grid.three {
@@ -947,28 +961,31 @@ input:focus {
   }
 
   .hero-right {
-    min-height: 500px;
-    display: block;
+    min-height: 560px;
+    display: grid;
+    grid-template-rows: minmax(240px, auto) auto;
+    align-content: start;
+    justify-items: end;
+    row-gap: 0.95rem;
+    padding-right: 0.35rem;
   }
 
   .hero-orbit {
-    position: absolute;
-    top: 51%;
-    right: 96px;
-    left: auto;
-    width: clamp(240px, 18vw, 280px);
+    position: relative;
+    width: clamp(250px, 18vw, 300px);
     margin-top: 0;
-    transform: translate(0, -50%);
+    justify-self: end;
+    align-self: end;
+    transform: translateX(28px);
   }
 
   .hero-capture {
-    position: absolute;
-    right: 0;
-    bottom: -178px;
+    position: relative;
     width: 320px;
     margin-top: 0;
-    margin-bottom: 0;
-    transform: rotate(-4deg);
+    margin-bottom: -192px;
+    justify-self: end;
+    transform: translateY(16px) rotate(-4deg);
   }
 
   .program-track:nth-child(2) {
