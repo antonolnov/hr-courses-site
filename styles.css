@@ -184,6 +184,30 @@ ul {
   box-shadow: 0 14px 34px rgba(63, 162, 248, 0.42);
 }
 
+.btn-consult {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #39d874 0%, #2fcf69 42%, #25b85a 100%);
+  box-shadow: 0 12px 28px rgba(40, 176, 89, 0.42);
+  animation: consult-pulse 2.4s ease-in-out infinite;
+}
+
+.btn-consult::after {
+  content: "";
+  position: absolute;
+  top: -140%;
+  left: -45%;
+  width: 28%;
+  height: 360%;
+  background: rgba(255, 255, 255, 0.44);
+  transform: rotate(24deg);
+  animation: consult-shine 2.4s ease-in-out infinite;
+}
+
+.btn-consult:hover {
+  box-shadow: 0 16px 32px rgba(34, 161, 80, 0.5);
+}
+
 .btn-nav {
   font-size: 0.9rem;
   padding: 0.72rem 1rem;
@@ -331,6 +355,37 @@ h3 {
   filter: blur(16px);
   z-index: -1;
   animation: cat-aura 6.8s ease-in-out infinite;
+}
+
+.cat-star {
+  position: absolute;
+  width: clamp(10px, 0.9vw, 14px);
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #ffffff, #b9e2ff);
+  clip-path: polygon(50% 0%, 62% 35%, 100% 50%, 62% 65%, 50% 100%, 38% 65%, 0% 50%, 38% 35%);
+  filter: drop-shadow(0 0 8px rgba(160, 216, 255, 0.9));
+  animation: star-float 4.6s ease-in-out infinite;
+}
+
+.cat-star-a {
+  top: 16%;
+  left: 14%;
+  animation-delay: -0.8s;
+}
+
+.cat-star-b {
+  top: 30%;
+  right: 10%;
+  width: clamp(8px, 0.8vw, 12px);
+  animation-delay: -2s;
+}
+
+.cat-star-c {
+  bottom: 19%;
+  left: 22%;
+  width: clamp(9px, 0.75vw, 11px);
+  animation-delay: -1.5s;
 }
 
 .hero-orbit img {
@@ -869,9 +924,57 @@ input:focus {
   }
 }
 
+@keyframes star-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.85) rotate(0deg);
+    opacity: 0.62;
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.16) rotate(16deg);
+    opacity: 1;
+  }
+}
+
+@keyframes consult-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 12px 28px rgba(40, 176, 89, 0.42);
+  }
+
+  50% {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 16px 34px rgba(34, 161, 80, 0.55);
+  }
+}
+
+@keyframes consult-shine {
+  0%,
+  22% {
+    left: -45%;
+    opacity: 0;
+  }
+
+  32%,
+  55% {
+    left: 122%;
+    opacity: 0.72;
+  }
+
+  100% {
+    left: 122%;
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-orbit::after,
-  .hero-orbit img {
+  .hero-orbit img,
+  .cat-star,
+  .btn-consult,
+  .btn-consult::after {
     animation: none;
   }
 }
@@ -974,7 +1077,7 @@ input:focus {
     width: clamp(220px, 24vw, 290px);
     justify-self: end;
     margin-top: 0;
-    transform: translateX(14px);
+    transform: translateX(-6px);
   }
 
   .card-grid.three {
@@ -1025,7 +1128,7 @@ input:focus {
     margin-top: 0;
     justify-self: end;
     align-self: end;
-    transform: translateX(28px);
+    transform: translateX(-14px);
   }
 
   .hero-capture {

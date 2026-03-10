@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260310a">
+  <link rel="stylesheet" href="styles.css?v=20260310b">
 </head>
 <body id="top">
   <div class="bg-layer" aria-hidden="true">
@@ -54,15 +54,18 @@
 
         <div class="hero-right">
           <div class="hero-orbit" aria-hidden="true">
+            <span class="cat-star cat-star-a"></span>
+            <span class="cat-star cat-star-b"></span>
+            <span class="cat-star cat-star-c"></span>
             <img src="hero-cat.png" alt="" loading="lazy">
           </div>
 
           <form class="hero-capture js-demo-form" id="hero-form" aria-label="Форма подбора программы" action="#" method="post">
             <h2>Персональный старт в HR</h2>
             <p>Оставьте контакт и получите подбор трека под вашу цель в течение рабочего дня.</p>
-            <label for="hero-contact">Телефон или Telegram</label>
-            <input id="hero-contact" name="contact" type="text" placeholder="+7 (...) или @username" autocomplete="tel" required>
-            <button type="submit" class="btn btn-primary">Получить консультацию</button>
+            <label for="hero-contact">Телефон</label>
+            <input id="hero-contact" name="contact" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+            <button type="submit" class="btn btn-primary btn-consult">Получить консультацию</button>
             <small>Без оплаты и обязательств</small>
             <ul class="capture-proof">
               <li>Куратор на связи</li>
@@ -229,8 +232,8 @@
           <p class="lead">Оставьте контакт и получите рекомендации по программе без обязательств.</p>
         </div>
         <form class="js-demo-form cta-form" action="#" method="post">
-          <label for="footer-contact">Контакт для связи</label>
-          <input id="footer-contact" name="contact" type="text" placeholder="Телефон или Telegram" required>
+          <label for="footer-contact">Телефон</label>
+          <input id="footer-contact" name="contact" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
           <button type="submit" class="btn btn-primary">Отправить заявку</button>
         </form>
       </div>
@@ -261,16 +264,16 @@
       <p class="lead-modal__program">Вы выбрали: <strong id="modal-program-label">Программу Workhere Academy</strong></p>
       <form class="js-demo-form lead-modal__form" id="modal-form" action="#" method="post">
         <input id="modal-program" name="program" type="hidden" value="">
-        <label for="modal-contact">Телефон или Telegram</label>
-        <input id="modal-contact" name="contact" type="text" placeholder="+7 (...) или @username" autocomplete="tel" required>
+        <label for="modal-contact">Телефон</label>
+        <input id="modal-contact" name="contact" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
         <label for="modal-goal">Цель обучения</label>
         <input id="modal-goal" name="goal" type="text" placeholder="Например: перейти в HR-роль" required>
-        <button type="submit" class="btn btn-primary">Получить консультацию</button>
+        <button type="submit" class="btn btn-primary btn-consult">Получить консультацию</button>
         <small>Ответим в рабочее время без обязательств</small>
       </form>
     </section>
   </div>
 
-  <script src="script.js?v=20260310a"></script>
+  <script src="script.js?v=20260310b"></script>
 </body>
 </html>
