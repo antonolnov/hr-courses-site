@@ -1114,6 +1114,14 @@ input:focus {
 }
 
 @media (max-width: 759px) {
+  .header,
+  .header.is-scrolled {
+    background: #f7fbff;
+    border-bottom: 1px solid rgba(151, 198, 242, 0.48);
+    backdrop-filter: none;
+    padding-top: max(env(safe-area-inset-top), 0px);
+  }
+
   .section {
     padding: 3.7rem 0;
   }
@@ -1123,15 +1131,36 @@ input:focus {
   }
 
   .header-row {
-    min-height: 72px;
+    min-height: 64px;
     flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .btn-nav {
+    display: none;
   }
 
   .nav {
     order: 3;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow-x: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    gap: 0.38rem;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    padding: 0.45rem 0.78rem;
+    border: 1px solid rgba(171, 205, 242, 0.64);
+    background: rgba(241, 248, 255, 0.96);
   }
 
   .hero-shell {
@@ -1208,6 +1237,8 @@ input:focus {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+    bottom: calc(env(safe-area-inset-bottom) + 0.55rem);
+    width: min(700px, calc(100% - 0.75rem));
   }
 
   .sticky-cta .btn {
