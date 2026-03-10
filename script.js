@@ -56,6 +56,7 @@ const modalOpeners = document.querySelectorAll('.js-open-lead-modal');
 if (leadModal && modalOpeners.length) {
   const modalProgramLabel = leadModal.querySelector('#modal-program-label');
   const modalProgramInput = leadModal.querySelector('#modal-program');
+  const modalNameInput = leadModal.querySelector('#modal-name');
   const modalContactInput = leadModal.querySelector('#modal-contact');
   const modalClosers = leadModal.querySelectorAll('[data-close-modal]');
   let lastFocusedElement = null;
@@ -78,7 +79,11 @@ if (leadModal && modalOpeners.length) {
     leadModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
     window.setTimeout(() => {
-      if (modalContactInput) modalContactInput.focus();
+      if (modalNameInput) {
+        modalNameInput.focus();
+      } else if (modalContactInput) {
+        modalContactInput.focus();
+      }
     }, 30);
   }
 
