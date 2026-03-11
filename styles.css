@@ -591,11 +591,117 @@ input:focus {
 
 #why .section-head h2,
 #format .section-head h2,
+#audience .section-head h2,
 #programs .section-head h2,
 #achievements .section-head h2,
 #results .section-head h2,
 #faq .section-head h2 {
   max-width: 22ch;
+}
+
+.audience-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.audience-head h2 {
+  margin: 0;
+}
+
+.audience-controls {
+  display: inline-flex;
+  gap: 0.45rem;
+}
+
+.audience-btn {
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid #c9def6;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #1c426d;
+  font: 700 1.45rem/1 "Manrope", sans-serif;
+  cursor: pointer;
+}
+
+.audience-btn:hover {
+  background: #f2f8ff;
+}
+
+.audience-carousel {
+  border-radius: 28px;
+  border: 1px solid #c1daf4;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(240, 248, 255, 0.92));
+  box-shadow: 0 14px 34px rgba(73, 148, 221, 0.14);
+  overflow: hidden;
+}
+
+.audience-track {
+  display: flex;
+  transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.audience-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.92fr) minmax(0, 1.08fr);
+}
+
+.audience-image-wrap {
+  min-height: 340px;
+  background: linear-gradient(180deg, #efe9df, #e9dfd2);
+}
+
+.audience-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.audience-copy {
+  padding: clamp(1rem, 2.2vw, 1.6rem);
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+}
+
+.audience-copy h3 {
+  font-size: clamp(1.42rem, 2.1vw, 2rem);
+  line-height: 1.05;
+}
+
+.audience-copy p {
+  color: #3f6289;
+  max-width: 40ch;
+}
+
+.audience-count {
+  margin-top: auto;
+  color: #163f67;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.audience-dots {
+  margin-top: 0.72rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.audience-dots span {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: #bfd8f4;
+}
+
+.audience-dots .is-active {
+  width: 1.15rem;
+  background: #0f66cb;
 }
 
 .program-lane {
@@ -1256,6 +1362,10 @@ input:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .audience-track {
+    transition: none;
+  }
+
   .bg-layer,
   .bg-orb-a,
   .bg-orb-b,
@@ -1348,6 +1458,38 @@ input:focus {
 
   .hero-copy {
     gap: 0.9rem;
+  }
+
+  .audience-head {
+    margin-bottom: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .audience-btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9px;
+  }
+
+  .audience-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .audience-image-wrap {
+    min-height: 260px;
+  }
+
+  .audience-copy {
+    padding: 0.95rem;
+    gap: 0.6rem;
+  }
+
+  .audience-copy h3 {
+    font-size: 1.34rem;
+  }
+
+  .audience-dots {
+    margin-top: 0.6rem;
   }
 
   .hero-trust li {
@@ -1481,6 +1623,10 @@ input:focus {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .audience-dots {
+    display: none;
+  }
+
   .achievements-shell {
     grid-template-columns: minmax(250px, 0.88fr) minmax(0, 1.12fr);
     align-items: stretch;
@@ -1548,6 +1694,10 @@ input:focus {
 
   .achievements-media {
     min-height: 650px;
+  }
+
+  .audience-image-wrap {
+    min-height: 390px;
   }
 
   .achievements-note {
