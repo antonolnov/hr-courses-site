@@ -647,11 +647,11 @@ input:focus {
 .audience-slide {
   min-width: 100%;
   display: grid;
-  grid-template-columns: minmax(250px, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
 }
 
 .audience-image-wrap {
-  min-height: 340px;
+  height: clamp(230px, 34vw, 320px);
   background: linear-gradient(180deg, #efe9df, #e9dfd2);
 }
 
@@ -659,11 +659,13 @@ input:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0.94) contrast(0.96);
 }
 
 .audience-copy {
   padding: clamp(1rem, 2.2vw, 1.6rem);
   display: grid;
+  min-height: clamp(230px, 34vw, 320px);
   align-content: start;
   gap: 0.8rem;
 }
@@ -1476,7 +1478,7 @@ input:focus {
   }
 
   .audience-image-wrap {
-    min-height: 260px;
+    height: 240px;
   }
 
   .audience-copy {
@@ -1636,6 +1638,14 @@ input:focus {
     min-height: 560px;
   }
 
+  .audience-image-wrap {
+    height: 300px;
+  }
+
+  .audience-copy {
+    min-height: 300px;
+  }
+
   .ach-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1692,12 +1702,16 @@ input:focus {
     transform: translateY(4px) rotate(-4deg);
   }
 
-  .achievements-media {
-    min-height: 650px;
+  .audience-image-wrap {
+    height: 340px;
   }
 
-  .audience-image-wrap {
-    min-height: 390px;
+  .audience-copy {
+    min-height: 340px;
+  }
+
+  .achievements-media {
+    min-height: 650px;
   }
 
   .achievements-note {
