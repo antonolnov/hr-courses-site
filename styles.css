@@ -672,6 +672,26 @@ input:focus {
   font-weight: 700;
 }
 
+.track-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem;
+}
+
+.track-badge {
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2dcc77, #1fb766);
+  border-radius: 999px;
+  padding: 0.27rem 0.55rem;
+  box-shadow: 0 8px 18px rgba(35, 168, 92, 0.28);
+}
+
 .track-points {
   list-style: none;
   padding: 0;
