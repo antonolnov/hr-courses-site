@@ -333,12 +333,23 @@ h3 {
 }
 
 .hero-trust li {
-  background: #f4f9ff;
-  border: 1px solid #c7ddf6;
-  color: #3a5f89;
+  background: linear-gradient(145deg, #eaf4ff, #f6fbff);
+  border: 1px solid #aecded;
+  color: #245280;
   border-radius: 999px;
   padding: 0.42rem 0.78rem;
   font-size: 0.88rem;
+  box-shadow: 0 6px 16px rgba(80, 148, 217, 0.15);
+}
+
+.hero-trust li:nth-child(2) {
+  background: linear-gradient(145deg, #dff0ff, #eef8ff);
+  border-color: #9ccaf0;
+}
+
+.hero-trust li:nth-child(3) {
+  background: linear-gradient(145deg, #e9f8ff, #f4fcff);
+  border-color: #a9d8f4;
 }
 
 .hero-orbit {
@@ -430,7 +441,12 @@ h3 {
   color: var(--muted);
 }
 
-.hero-capture__grid,
+.hero-capture__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
 .lead-modal__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -440,10 +456,6 @@ h3 {
 .form-field {
   display: grid;
   gap: 0.22rem;
-}
-
-.form-field-full {
-  grid-column: 1 / -1;
 }
 
 label {
