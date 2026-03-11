@@ -333,22 +333,22 @@ h3 {
 }
 
 .hero-trust li {
-  background: linear-gradient(135deg, #ff9f5a, #ff7a35);
+  background: linear-gradient(135deg, #2dcc77, #1fb766);
   border: 0;
   color: #ffffff;
   border-radius: 999px;
   padding: 0.42rem 0.78rem;
   font-size: 0.88rem;
   font-weight: 700;
-  box-shadow: 0 10px 20px rgba(243, 125, 53, 0.3);
+  box-shadow: 0 10px 20px rgba(35, 168, 92, 0.3);
 }
 
 .hero-trust li:nth-child(2) {
-  background: linear-gradient(135deg, #22c89a, #0cae7d);
+  background: linear-gradient(135deg, #2dcc77, #1fb766);
 }
 
 .hero-trust li:nth-child(3) {
-  background: linear-gradient(135deg, #ff6f8e, #ff4f73);
+  background: linear-gradient(135deg, #2dcc77, #1fb766);
 }
 
 .hero-orbit {
