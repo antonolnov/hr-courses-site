@@ -651,8 +651,21 @@ input:focus {
 }
 
 .audience-image-wrap {
+  position: relative;
   height: clamp(240px, 32vw, 320px);
   background: linear-gradient(180deg, #efe9df, #e9dfd2);
+}
+
+.audience-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(118deg, rgba(255, 248, 235, 0.24) 0 27%, rgba(0, 0, 0, 0) 27% 100%),
+    repeating-linear-gradient(118deg, rgba(0, 0, 0, 0.18) 0 18px, rgba(0, 0, 0, 0) 18px 56px);
+  mix-blend-mode: multiply;
+  opacity: 0.26;
+  pointer-events: none;
 }
 
 .audience-image-wrap img {
@@ -660,7 +673,7 @@ input:focus {
   height: 100%;
   object-fit: cover;
   object-position: center 26%;
-  filter: saturate(0.94) contrast(0.96);
+  filter: saturate(0.92) contrast(0.98) sepia(0.05) hue-rotate(-8deg);
 }
 
 .audience-copy {
