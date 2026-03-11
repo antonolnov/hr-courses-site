@@ -351,6 +351,35 @@ h3 {
   background: linear-gradient(135deg, #2dcc77, #1fb766);
 }
 
+.hero-quicklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem;
+  max-width: 640px;
+}
+
+.hero-quick-item {
+  display: grid;
+  gap: 0.24rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(149, 196, 239, 0.5);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.94), rgba(232, 245, 255, 0.84));
+  box-shadow: 0 10px 20px rgba(72, 138, 206, 0.14);
+}
+
+.hero-quick-item strong {
+  font-size: 0.92rem;
+  color: #173d6a;
+  letter-spacing: -0.01em;
+}
+
+.hero-quick-item span {
+  font-size: 0.84rem;
+  line-height: 1.34;
+  color: #4b6888;
+}
+
 .hero-orbit {
   position: relative;
   width: clamp(220px, 23vw, 300px);
@@ -1527,6 +1556,10 @@ input:focus {
   .hero-trust li {
     font-size: 0.8rem;
     padding: 0.36rem 0.64rem;
+  }
+
+  .hero-quicklist {
+    display: none;
   }
 
   .hero-right {
